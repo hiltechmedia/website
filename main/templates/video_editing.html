@@ -1,7 +1,22 @@
 {% extends 'base.html' %}
 {% block content %}
-  <div class="jumbotron">
-    <h1>Video Editing</h1>
-    <p>Our video editing services are tailored to make your projects stand out. From commercials to full-length features, we handle it all.</p>
+  {% load static %}
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <img src="{% static 'video-editing2.jpg' %}" class="card-img-top" alt="Video Editing" />
+          <div class="card-body">
+            <h5 class="card-title">Video Editing</h5>
+            <p class="card-text">
+              <h1>Video Editing</h1>
+              At Hiltech Our video editing services at Hiltech Media Solutions provide clients with the highest level of professionalism. From personal projects to corporate promotional videos, we bring your footage to life with precision and creativity. Whether you're looking to produce a promotional video for an event or create a compelling narrative, our editors are equipped with the latest tools and techniques to ensure your vision is executed flawlessly.<br /><br />
+
+              <p>We believe in delivering more than just well-cut videos; we focus on crafting engaging and impactful visual stories. Our team is committed to working with you from concept to final output, making sure that every detail—from transitions to special effects—aligns with your project goals and brand identity. We’re here to make your vision a reality with smooth, seamless editing that captivates your audience.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 {% endblock %}

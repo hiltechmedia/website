@@ -1,7 +1,60 @@
 {% extends 'base.html' %}
 {% block content %}
-  <div class="jumbotron">
-    <h1>Welcome to Hiltech Media Solutions</h1>
-    <p>Your partner in creative media production, specializing in music and video editing.</p>
+  {% load static %}
+  <div class="container mt-4">
+    <div class="row">
+      <!-- Card 1: Music Studio -->
+      <div class="container mt-4">
+        <h1>About Us</h1>
+        <h2>Hiltech Media Solutions</h2>
+        <p>Hiltech Media Solutions At Hiltech Media Solutions, we are passionate about helping businesses establish a strong online presence. Our web development services are designed to put your business on the world stage, ensuring that your website not only looks professional but is fully functional, responsive, and optimized for search engines. We collaborate with you to create a website that reflects your brand's identity while providing a seamless experience for your customers. From design to deployment, we take care of every aspect, allowing you to focus on growing your business.</p>
+
+        <p>We also specialize in a diverse range of other services aimed at elevating your creative projects to new heights. We offer music mixing and mastering that brings your tracks to life with professional sound quality, ensuring clarity and impact. Our video editing services transform raw footage into polished, engaging content, whether for promotional events, corporate presentations, or personal projects. Additionally, our team excels in graphic design, providing visually striking materials like flyers and service booklets that communicate your message effectively.</p>
+
+        <p>With a commitment to quality and customer satisfaction, Hiltech Media Solutions is dedicated to helping individuals and businesses express their creativity through multiple mediums. We work closely with our clients to deliver customized solutions that meet their unique needs and objectives, ensuring every project reflects our dedication to excellence.</p>
+        <div class="row">
+          <!-- Card 1: Music Studio -->
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img src="{% static 'music-studio.jpeg' %}" class="card-img-top equal-image" alt="Music Studio" />
+              <div class="card-body">
+                <h5 class="card-title">Music Studio</h5>
+                <p class="card-text">Explore our state-of-the-art music studio where creativity meets technology.</p>
+                <a href="{% url 'music_studio' %}" class="btn btn-primary">Go to Music Studio</a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2: Video Editing -->
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img src="{% static 'video-editing.jpg' %}" class="card-img-top equal-image" alt="Video Editing" />
+              <div class="card-body">
+                <h5 class="card-title">Video Editing</h5>
+                <p class="card-text">Learn more about our professional video editing services tailored for every need.</p>
+                <a href="{% url 'video_editing' %}" class="btn btn-primary">Go to Video Editing</a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3: Web Design -->
+          <div class="col-md-4">
+            <div class="card h-100">
+              <img src="{% static 'web-design.jpg' %}" class="card-img-top equal-image" alt="Web Design" />
+              <div class="card-body">
+                <h5 class="card-title">Web Design</h5>
+                <p class="card-text">Get in touch with us to discuss your web design needs. We also design flyers and service booklets.</p>
+                <a href="{% url 'web_designing' %}" class="btn btn-primary">Go to Web Design</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+  <style>
+    .equal-image {
+      height: 200px; /* Set this to the desired height */
+      object-fit: cover; /* Ensures the image covers the area without distortion */
+      width: 100%; /* Ensure the image takes up the full width of the card */
+    }
+  </style>
 {% endblock %}

@@ -1,7 +1,22 @@
 {% extends 'base.html' %}
 {% block content %}
-  <div class="jumbotron">
-    <h1>Music Studio</h1>
-    <p>We offer state-of-the-art music recording and production services. Our studio is equipped with the latest technology to deliver pristine sound quality.</p>
+  {% load static %}
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <img src="{% static 'music-studio2.jpg' %}" class="card-img-top" alt="Music Studio" />
+          <div class="card-body">
+            <h5 class="card-title">Music Studio</h5>
+            <p class="card-text">
+              <h1>Hiltech Music Studio</h1>
+              At Hiltech Music Studio, we pride ourselves on delivering exceptional customer experiences through our comprehensive music mixing and mastering services. Our state-of-the-art equipment and expertise ensure that every track is polished to perfection, giving your music a professional, high-quality sound. We understand the importance of preserving the artist’s vision while enhancing the audio’s clarity, balance, and depth, making sure it resonates with the intended audience. Whether you're a seasoned artist or a newcomer, our tailored approach guarantees that your unique style and sound will shine through every project we handle.
+
+              Customer satisfaction is at the heart of everything we do. Our team of sound engineers works closely with clients, offering personalized feedback throughout the mixing and mastering process to ensure the final product exceeds expectations. We prioritize clear communication, timely delivery, and superior results that make your music stand out in today’s competitive industry.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 {% endblock %}

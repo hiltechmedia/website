@@ -1,7 +1,31 @@
 {% extends 'base.html' %}
+
 {% block content %}
-  <div class="jumbotron">
-    <h1>Contact Us</h1>
-    <p>Reach out to us for any inquiries or project discussions. We're here to help bring your vision to life.</p>
+  <div class="container">
+    <div class="card shadow rounded">
+      <div class="card-body">
+        <h2>Contact Us</h2>
+        <form method="POST">
+          {% csrf_token %}
+          {% if form.errors %}
+            <div class="alert alert-danger">
+              <strong>Please correct the errors below:</strong>
+              <ul>
+                {% for field in form %}
+                  {% for error in field.errors %}
+                    <li>{{ field.label }}: {{ error }}</li>
+                  {% endfor %}
+                {% endfor %}
+                {% for error in form.non_field_errors %}
+                  <li>{{ error }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endif %}
+          {{ form.as_p }} <!-- Renders the form fields -->
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
   </div>
 {% endblock %}
